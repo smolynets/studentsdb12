@@ -3,6 +3,7 @@ from django.contrib.auth import admin as auth_admin
 from django.contrib.auth.models import User
 from .models import StProfile
 
+
 class StProfileInline(admin.StackedInline):
   model = StProfile
 
