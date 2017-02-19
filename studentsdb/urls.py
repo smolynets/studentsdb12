@@ -79,11 +79,11 @@ name='registration_activate'),
 url(r'^users/activate/complete/$',
 TemplateView.as_view(template_name='registration/activation_complete.html'),
 name='registration_activation_complete'),
-url(r'^users_list$', 'login.views.users_list', name='users_list'),
+url(r'^users_list$', 'log.views.users_list', name='users_list'),
 url(r'^users/(?P<pk>\d+)/one/$',
-'login.views.users_one', name='users_one'),
-url(r'^prof/(?P<pk>\d+)/edit$', 'login.views.user_edit', name='prof_edit'),
-url(r'^user/(?P<pk>\d+)/edit$', 'login.views.user_one_edit', name='user_edit'),
+'log.views.users_one', name='users_one'),
+url(r'^prof/(?P<pk>\d+)/edit$', 'log.views.user_edit', name='prof_edit'),
+url(r'^user/(?P<pk>\d+)/edit$', 'log.views.user_one_edit', name='user_edit'),
 
 
 # Social Auth Related urls

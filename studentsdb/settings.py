@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'students',
     'studentsdb',
     'login',
+    'log',
 ]
 
 MIDDLEWARE_CLASSES = [
