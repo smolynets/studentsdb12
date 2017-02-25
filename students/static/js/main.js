@@ -130,7 +130,7 @@ function initLangSelector() {
 
 
 function initUserLangSelector() {
-    $('#Userlang-selector select').change(function(event){
+    $('#lang-sel div').change(function(event){
         var lan = $(this).val();
         if (lan) {
             $.cookie('django_language', lan, {'path': '/', 'expires': 365});

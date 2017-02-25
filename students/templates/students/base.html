@@ -19,9 +19,15 @@ href="{{ PORTAL_URL }}{% static "css/main.css" %}">
 
 <!-- Start Container -->
 <div class="container">
-{{ user.stprofile.lang }}
-{% if user.is_authenticated %}
 
+{% if user.is_authenticated %}
+<div> 
+{% if user.stprofile.lang  == 'uk' %}
+українська
+{% elif user.stprofile.lang == 'en' %}
+english
+{% endif %}
+</div>
 {% else %} 
 <div class="col-xs-4" id="lang-selector"> 
 <select>
@@ -44,8 +50,8 @@ href="{{ PORTAL_URL }}{% static "css/main.css" %}">
 <option value="">{% trans "all students" %}</option>
 {% for group in GROUPS %}  
 <option value="{{ group.id }}" {% if group.selected %} selected="1" {% endif %}>
-	{{ group.title }} {% if group.leader %} {{ group.leader }} {% endif %} 
-	{% endfor %}
+  {{ group.title }} {% if group.leader %} {{ group.leader }} {% endif %} 
+  {% endfor %}
 </option>  
 </select> 
 </div>

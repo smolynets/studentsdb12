@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'social.apps.django_app.default',
     'students',
     'studentsdb',
-    'login',
     'log',
 ]
 

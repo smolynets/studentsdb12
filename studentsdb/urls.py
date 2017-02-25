@@ -26,7 +26,7 @@ from students.view.logs import logs
 from students.view.contact_admin import contact_admin
 from django.contrib.auth.decorators import login_required
 from registration.backends.default import views as registration_views
-from login.views import user_edit
+from log.views import user_edit
 
 
 
@@ -84,6 +84,7 @@ url(r'^users/(?P<pk>\d+)/one/$',
 'log.views.users_one', name='users_one'),
 url(r'^prof/(?P<pk>\d+)/edit$', 'log.views.user_edit', name='prof_edit'),
 url(r'^user/(?P<pk>\d+)/edit$', 'log.views.user_one_edit', name='user_edit'),
+
 
 
 # Social Auth Related urls
